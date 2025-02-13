@@ -24,7 +24,7 @@ public class PersonaRestController {
 
 	@GetMapping
 	public List<PersonaDto> getPersonas() {
-		return service.getPersonas().stream().map(PersonaMapper::toDto).toList();
+		return service.getPersonas().stream().map((p)-> new PersonaDto(p.getNombre().toUpperCase())).toList();
 	}
 
 }
