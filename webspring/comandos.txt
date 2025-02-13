@@ -1,0 +1,6 @@
+docker build -t=webspring .
+docker images
+docker run -p 8083:8083 webspring
+docker ps -a
+#remove all unused images (including ones not currently associated with running containers)
+docker image prune -a -f
